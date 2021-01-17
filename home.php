@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style-nobleliving.css">
   <link rel="stylesheet" href="css/font.css">
-  <link href='style.css' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
@@ -93,7 +93,36 @@
             align-items: center;
           }
 
-          .tab-container .tab-item .icon {
+          .tab-container .tab-item .nobleliving {
+            background-image: url(./images/icon/nobleliving-inactive.svg);
+            width: 32px;
+            height: 32px;
+            margin-bottom: 6px;
+          }
+
+          .tab-container .tab-item .mailbox {
+            background-image: url(./images/icon/mailbox-inactive.svg);
+            width: 32px;
+            height: 32px;
+            margin-bottom: 6px;
+          }
+
+          .tab-container .tab-item .aftersale {
+            background-image: url(./images/icon/aftersale-inactive.svg);
+            width: 32px;
+            height: 32px;
+            margin-bottom: 6px;
+          }
+
+          .tab-container .tab-item .retalresale {
+            background-image: url(./images/icon/retalresale-inactive.svg);
+            width: 32px;
+            height: 32px;
+            margin-bottom: 6px;
+          }
+
+          .tab-container .tab-item .resident {
+            background-image: url(./images/icon/resident-inactive.svg);
             width: 32px;
             height: 32px;
             margin-bottom: 6px;
@@ -101,13 +130,11 @@
 
           .tab-container .tab-item .label {
             margin-bottom: 4px;
-
             font-family: Med;
             font-size: 18px;
             line-height: 18px;
             text-align: center;
             color: #000;
-
             transition: .2s all;
           }
 
@@ -120,14 +147,47 @@
             position: absolute;
             bottom: -4px;
             left: 0;
-
             background-color: #d26132;
-
             transition: .2s all;
           }
 
           .tab-container .tab-item.active::after {
             bottom: 0;
+          }
+
+          .tab-container .tab-item.active .nobleliving {
+            background-image: url(./images/icon/nobleliving1-active.svg);
+            width: 32px;
+            height: 32px;
+            margin-bottom: 6px;
+          }
+
+          .tab-container .tab-item.active .mailbox {
+            background-image: url(./images/icon/mailbox-active.svg);
+            width: 32px;
+            height: 32px;
+            margin-bottom: 6px;
+          }
+
+          .tab-container .tab-item.active .aftersale {
+            background-image: url(./images/icon/aftersale-active.svg);
+            width: 32px;
+            height: 32px;
+            margin-bottom: 6px;
+          }
+
+          .tab-container .tab-item.active .retalresale {
+            background-image: url(./images/icon/retalresale1-active.svg);
+            width: 32px;
+            height: 32px;
+            margin-bottom: 6px;
+          }
+
+          .tab-container .tab-item.active .resident {
+            background-image: url(./images/icon/resident-active.svg);
+            width: 32px;
+            height: 32px;
+            margin-bottom: 6px;
           }
 
           .tab-container .tab-item.active .label {
@@ -138,27 +198,27 @@
         <div class="tab-container" id="tab-con">
 
           <div class="tab-item tablinks" onclick="openCity(event, 'NobleLiving')" id="defaultOpen">
-            <div class="icon"> <img src="./images/icon/nobleliving-inactive.svg" alt=""></div>
+            <div class="nobleliving"></div>
             <div class="label">Noble Living</div>
           </div>
 
           <div class="tab-item tablinks" onclick="openCity(event, 'tabMailBox')">
-            <div class="icon"> <img src="./images/icon/mailbox.svg" alt=""></div>
+            <div class="mailbox"></div>
             <div class="label">Mail Box</div>
           </div>
 
           <div class="tab-item tablinks" onclick="openCity(event, 'tabAftersale')">
-            <div class="icon"> <img src="./images/icon/aftersale.svg" alt=""></div>
+            <div class="aftersale"></div>
             <div class="label">Aftersale Service</div>
           </div>
 
           <div class="tab-item tablinks" onclick="openCity(event, 'tabRental')">
-            <div class="icon"> <img src="./images/icon/retalresale.svg" alt=""></div>
+            <div class="retalresale"></div>
             <div class="label">Rental Resale</div>
           </div>
 
           <div class="tab-item tablinks" onclick="openCity(event, 'tabResidentInfo')">
-            <div class="icon"> <img src="./images/icon/resident.svg" alt=""></div>
+            <div class="resident"></div>
             <div class="label">Resident Info</div>
           </div>
 
@@ -226,7 +286,7 @@
             }
 
             .label_announement {
-              font-family: DBHeavent-Med;
+              font-family: Med;
               font-size: 20px;
               font-weight: normal;
               font-stretch: normal;
@@ -241,11 +301,24 @@
           <section>
             <div class="notifi-container tablinks" onclick="openCity(event, 'tabDetailMailBox');container_display();">
               <div>
-                <span class="label_notifi">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+                <span class="label_notifi"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
+                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
               </div>
-
               <div class="label-detail_notifi">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
-                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี </div>
+                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+              </div>
+              <div>
+                <span class="label_notified">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+              </div>
+              <div class="label-detail_notified">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+              </div>
+              <div>
+                <span class="label_notified">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+              </div>
+              <div class="label-detail_notified">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+              </div>
             </div>
           </section>
 
@@ -262,10 +335,12 @@
 
           <style>
             .notifi-container {
-              width: 100%;
-              /* height: 99px; */
-              padding: 0 16px;
-              /* border-bottom: 3px solid #f2f2f2; */
+              /* width: 100%; */
+              height: 70px;
+              margin-left: 16px;
+              margin-right: 16px;
+              /* padding: 0 16px; */
+              border-bottom: 1px solid #f2f2f2;
             }
 
             .label_notifi {
@@ -281,6 +356,21 @@
               letter-spacing: normal;
               /* text-align: left; */
               color: var(--base-black);
+            }
+
+            .label_notified {
+              width: 100%;
+              /* height: 40px; */
+              margin: 0 8px 0 16px;
+              font-family: Med;
+              font-size: 20px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1;
+              letter-spacing: normal;
+              /* text-align: left; */
+              color: #4d4d4d;
             }
 
             .label_date {
@@ -302,7 +392,7 @@
             .label-detail_notifi {
               width: 100%;
               height: 40px;
-              margin: 2px 0 0;
+              margin: 2px 16px 16px;
               font-family: Reg;
               font-size: 20px;
               font-weight: normal;
@@ -311,8 +401,24 @@
               line-height: 1;
               letter-spacing: normal;
               text-align: left;
-              color: var(--black-80);
-              border-bottom: 1px solid #f2f2f2;
+              color: #4d4d4d;
+              /* border-bottom: 3px solid #f2f2f2; */
+            }
+
+            .label-detail_notified {
+              width: 100%;
+              height: 40px;
+              margin: 2px 16px 16px;
+              font-family: Reg;
+              font-size: 20px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1;
+              letter-spacing: normal;
+              text-align: left;
+              color: #808080;
+              /* border-bottom: 3px solid #f2f2f2; */
             }
           </style>
 
@@ -349,9 +455,9 @@
 
           .label-title-detail {
             width: 100%;
-            /* font-family: DBHeavent; */
+            font-family: Med;
             font-size: 20px;
-            font-weight: bold;
+            font-weight: normal;
             font-stretch: normal;
             font-style: normal;
             line-height: 1;
@@ -479,8 +585,7 @@
             width: 100%;
             height: 30px;
             margin: 0 0 8px;
-            ;
-            /* font-family: DBHeavent; */
+            font-family: Bd;
             font-size: 30px;
             font-weight: bold;
             font-stretch: normal;
@@ -488,7 +593,7 @@
             line-height: 1;
             letter-spacing: normal;
             text-align: left;
-            color: #000000;
+            color: #4d4d4d;
           }
 
           .textarea {
@@ -497,21 +602,22 @@
             padding: 8px 8px 136px;
             border-radius: 6px;
             background-color: rgba(0, 0, 0, 0.05);
+            border: solid 0px;
           }
 
           .photo-frame {
             width: 100%;
-            height: 168px;
-            padding: 8px 8px 136px;
-            border-radius: 6px;
-            /* background-color: rgba(0, 0, 0, 0.05); */
+            height: 52px;
+            margin: 8px 0 0;
+            padding: 8px 0;
+            /* display: flex; */
           }
 
           .photo-label {
             width: 100%;
             height: 24px;
-            margin: 6px 8px 6px 0;
-            font-family: DBHeavent;
+            margin: 6px 14px 6px 0;
+            font-family: Bd;
             font-size: 24px;
             font-weight: bold;
             font-stretch: normal;
@@ -519,18 +625,8 @@
             line-height: 1;
             letter-spacing: normal;
             text-align: left;
-            color: var(--black-80);
+            color: #4d4d4d;
           }
-
-          /* .upload {
-          width: 102px;
-          height: 36px;
-          margin: 0 0 0 8px;
-          padding: 8px 12px 3.7px;
-          border-radius: 32px;
-          border: solid 1px var(--black-20);
-          background-color: #e5e5e5;
-          } */
 
           .label-upload {
             width: 46px;
@@ -545,26 +641,113 @@
             text-align: center;
             color: #3c4143;
           }
+
+          .btn-upload {
+            background-color: #ffffff;
+            color: #3c4143;
+            width: 102px;
+            height: 36px;
+            margin: 0 0 0 8px;
+            border-radius: 32px;
+            border: solid 1px #e5e5e5;
+            font-family: Med;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+          }
+
+          .frame-insert-image {
+            /* width: 328px; */
+            height: 194px;
+            /* margin: 286px 0 0; */
+            padding: 0 0 16px;
+          }
+
+          .btn-submit {
+            width: 100%;
+            height: 48px;
+            margin: 16px 0 0;
+            /* padding: 12px 136.5px; */
+            border-radius: 8px;
+            background-color: #d26132;
+            color: #fff;
+            border: solid 0px;
+
+          }
+
+          input[type="file"] {
+            display: block;
+          }
+
+          .imageThumb {
+            height: 102px;
+            width: 102px;
+            /* border: 2px solid;
+            padding: 1px;
+            cursor: pointer; */
+          }
+
+          .pip {
+            display: inline-block;
+            margin: 10px 10px 0 0;
+            position: relative;
+          }
+
+          .remove {
+            width: 15px;
+            height: 16px;
+            border-radius: 12px;
+            /* padding: 4px 4px 4px 4px; */
+            background-image: url(./images/icon/close.svg);
+            background-repeat: no-repeat, repeat;
+            /* border: 1px solid black; */
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: #fff;
+          }
+
+
+          .remove:hover {
+            background: white;
+            color: black;
+          }
+
+          .container-image {
+            position: relative;
+          }
+
+          .topright {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+          }
         </style>
 
         <div id="tabAftersale" class="tabcontent">
-          <section style=" padding: 16px 16px 16px 16px">
+          <section style=" padding: 16px 16px 0px 16px">
             <div class="AFTERSALE-SERVICE">AFTERSALE SERVICE</div>
-            <textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
+            <textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="DETAILS"></textarea>
           </section>
 
           <section style=" padding: 0px 16px 16px 16px">
             <div class="photo-frame">
-              <div class="photo-label">Photos</div>
-              <form method="post" action="" enctype="multipart/form-data" id="myform">
-                <div>
-                  <input type="file" id="file" name="file" style="display: none" />
-                  <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
-                </div>
-                <input type="button" class="button" value="Submit" id="but_upload">
-              </form>
-              <div class="container"></div>
+              <div class="photo-label">PHOTOS</div>
+
+              <!-- <input type="button" value="Upload" class="btn-upload" onclick="document.getElementById('files').click();" /> -->
+
+
             </div>
+            <div class="frame-insert-image">
+              <input type="file" id="files" name="files[]" multiple />
+              <button class="btn-submit">SUBMIT</button>
+            </div>
+
           </section>
         </div>
 
@@ -575,14 +758,10 @@
         <style>
           .guidebook {
             width: 100%;
-            padding-left: 16px;
-            padding-right: 16px;
-            padding-top: 8px;
-            height: 30px;
-            margin: 0 0 8px;
-            font-family: DBHeavent;
+            padding: 16px 16px 0px 16px;
+            font-family: Bd;
             font-size: 30px;
-            font-weight: bold;
+            font-weight: normal;
             font-stretch: normal;
             font-style: normal;
             line-height: 1;
@@ -592,27 +771,29 @@
           }
 
           .guidebook-container {
-            width: 100%;
+            /* width: 100%; */
             /* height: 148px; */
-            margin: 8px 0 16px;
-            padding: 12px;
+            margin: 8px 16px 16px 16px;
             border-radius: 12px;
             box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
-            border: solid 1px var(--black-10);
-            background-color: var(--cement-10);
+            background-color: #fff;
+            border: solid 1px #f2f2f2;
           }
 
-          /* .image-container {
-          width: 30%;
-          height: 124px;
-          margin: 0 16px 0 0;
-          border-radius: 8px;
-          background-color: #000000;
-          } */
+          .image-container {
+            width: 96px;
+            height: 124px;
+            margin: 12px 16px 12px 12px;
+            /* padding: 40px 5px 41px; */
+            /* margin: 0 16px 0 0; */
+            border-radius: 8px;
+            background-color: #000000;
+          }
 
           .resident-guidebook {
             width: 100%;
             height: 20px;
+            margin-top: 12px;
             font-size: 20px;
             font-weight: bold;
             font-stretch: normal;
@@ -624,10 +805,10 @@
           }
 
           .detail-book {
-            width: 60%;
+            width: 100%;
             height: 48px;
             margin: 5px 0 0;
-            /* font-family: DBHeavent; */
+            font-family: Bd;
             font-size: 24px;
             font-weight: bold;
             font-stretch: normal;
@@ -635,7 +816,7 @@
             line-height: 1;
             letter-spacing: normal;
             text-align: left;
-            color: #000000;
+            color: #1a1a1a;
           }
 
           .dowload-btn {
@@ -643,7 +824,7 @@
             font-size: 20px;
             width: 105px;
             height: 41px;
-            margin: 8px 96px 0 0;
+            margin: 8px 0px 24px 0;
             padding: 8px 12px;
             border-radius: 32px;
             color: #fff;
@@ -654,13 +835,20 @@
 
         <div id="tabResidentInfo" class="tabcontent">
           <div class="tab-content">
+
             <section>
               <div class="guidebook"> Guide Book</div>
               <div class="guidebook-container">
-                <img class="image-container" />
-                <div class="resident-guidebook">Resident Guide Book</div>
-                <div class="detail-book">NUE Noble Fai Chai - Wang Lang</div>
-                <button class="dowload-btn">Download</button>
+                <div style="display: flex;">
+                  <div>
+                    <img class="image-container" />
+                  </div>
+                  <div>
+                    <div class="resident-guidebook">Resident Guide Book</div>
+                    <div class="detail-book">NUE Noble Fai Chai - Wang Lang</div>
+                    <button class="dowload-btn">Download</button>
+                  </div>
+                </div>
               </div>
             </section>
 
@@ -671,7 +859,7 @@
                 margin: 0 0 4px;
                 padding-left: 16px;
                 padding-right: 16px;
-                /* font-family: Bold; */
+                font-family: Bd;
                 font-size: 30px;
                 font-weight: bold;
                 font-stretch: normal;
@@ -687,15 +875,15 @@
               }
 
               .list-phone_directory .list-item {
-                padding-left: 16px;
-                padding-right: 16px;
+                margin-left: 16px;
+                margin-right: 16px;
                 padding-top: 8px;
                 padding-bottom: 8px;
                 display: flex;
                 flex-direction: row;
                 align-items: flex-start;
-                width: 100%;
-                border-bottom: 1px solid #000;
+                /* width: 100%; */
+                border-bottom: 1px solid #f2f2f2;
               }
 
               .list-phone_directory .list-item .info {
@@ -715,7 +903,7 @@
               .list-phone_directory .list-item .info .contact-name {
                 width: 100%;
                 height: 24px;
-                /* font-family: DBHeavent; */
+                font-family: Bd;
                 font-size: 24px;
                 font-weight: bold;
                 font-stretch: normal;
@@ -723,7 +911,7 @@
                 line-height: 1;
                 letter-spacing: normal;
                 text-align: left;
-                color: var(--black-100);
+                color: #1a1a1a;
               }
 
               .list-phone_directory .list-item .info .contact-tel {
@@ -797,69 +985,32 @@
   document.getElementById("defaultOpen").click();
 </script>
 
-<script src='jquery-3.2.1.min.js' type='text/javascript'></script>
-<script type='text/javascript'>
-  $(document).ready(function () {
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    if (window.File && window.FileList && window.FileReader) {
+      $("#files").on("change", function(e) {
+        var files = e.target.files,
+          filesLength = files.length;
+        for (var i = 0; i < filesLength; i++) {
+          var f = files[i]
+          var fileReader = new FileReader();
+          fileReader.onload = (function(e) {
+            var file = e.target;
+            $("<div class=\"pip\">" +
+              "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+              "<br/><div class=\"remove\"></div>" +
+              "</div>").insertAfter("#files");
+            $(".remove").click(function() {
+              $(this).parent(".pip").remove();
+            });
 
-    // Upload
-    $("#but_upload").click(function () {
-
-      var fd = new FormData();
-      var files = $('#file')[0].files[0];
-      fd.append('file', files);
-      fd.append('request', 1);
-
-      // AJAX request
-      $.ajax({
-        url: 'addremove.php',
-        type: 'post',
-        data: fd,
-        contentType: false,
-        processData: false,
-        success: function (response) {
-
-          if (response != 0) {
-            var count = $('.container .content').length;
-            count = Number(count) + 1;
-
-            // Show image preview with Delete button
-            $('.container').append("<div class='content' id='content_" + count + "' ><img src='" +
-              response + "' width='100' height='100'><div style='position:absolute;'><span class='delete' id='delete_" + count +
-              "'>X</span></div></div>");
-          } 
+          });
+          fileReader.readAsDataURL(f);
         }
       });
-    });
-
-    // Remove file
-    $('.container').on('click', '.content .delete', function () {
-
-      var id = this.id;
-      var split_id = id.split('_');
-      var num = split_id[1];
-
-      // Get image source
-      var imgElement_src = $('#content_' + num + ' img').attr("src");
-
-      // AJAX request
-      $.ajax({
-        url: 'addremove.php',
-        type: 'post',
-        data: {
-          path: imgElement_src,
-          request: 2
-        },
-        success: function (response) {
-
-          // Remove <div >
-          if (response == 1) {
-            $('#content_' + num).remove();
-          }
-
-        }
-      });
-
-    });
-
+    } else {
+      alert("Your browser doesn't support to File API")
+    }
   });
 </script>
