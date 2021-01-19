@@ -31,7 +31,7 @@
       </nav>
     </div>
     <div>
-      <div class="box-unit">
+      <div class="box-unit" id="tab-con2">
         <div class="project" id="choose_unit">
           <div class="name">NUE Noble Fai Chai - Wang Lang</div>
           <div class="unit">Unit : 1035 / 946</div>
@@ -195,29 +195,29 @@
           }
         </style>
 
-        <div class="tab-container" id="tab-con">
+        <div class="tab-container" id="tab-con1">
 
-          <div class="tab-item tablinks" onclick="openCity(event, 'NobleLiving')" id="defaultOpen">
+          <div class="tab-item tablinks" onclick="openTab(event, 'NobleLiving')" id="defaultOpen">
             <div class="nobleliving"></div>
             <div class="label">Noble Living</div>
           </div>
 
-          <div class="tab-item tablinks" onclick="openCity(event, 'tabMailBox')">
+          <div class="tab-item tablinks" onclick="openTab(event, 'tabMailBox')">
             <div class="mailbox"></div>
             <div class="label">Mail Box</div>
           </div>
 
-          <div class="tab-item tablinks" onclick="openCity(event, 'tabAftersale')">
+          <div class="tab-item tablinks" onclick="openTab(event, 'tabAftersale')">
             <div class="aftersale"></div>
             <div class="label">Aftersale Service</div>
           </div>
 
-          <div class="tab-item tablinks" onclick="openCity(event, 'tabRental')">
+          <div class="tab-item tablinks" onclick="openTab(event, 'tabRental')">
             <div class="retalresale"></div>
             <div class="label">Rental Resale</div>
           </div>
 
-          <div class="tab-item tablinks" onclick="openCity(event, 'tabResidentInfo')">
+          <div class="tab-item tablinks" onclick="openTab(event, 'tabResidentInfo')">
             <div class="resident"></div>
             <div class="label">Resident Info</div>
           </div>
@@ -229,17 +229,20 @@
 
         <div id="NobleLiving" class="tabcontent">
           Content Here.
+          <div class="box-bottom-action notification">
+            <button class="btn btn-noti" type="button">Service Status <span class="number">3</span></button>
+          </div>
         </div>
 
 
         <div id="tabMailBox" class="tabcontent">
           <section>
             <div class="btn-container">
-              <button class="btn_notifi">
+              <button class="btn_notifi tablinks" onclick="openTab(event, 'tabMailBox');">
                 <div class="label_notifi-btn">Notification</div>
               </button>
-              <button class="btn_announement">
-                <div class="label_notifi-btn">Announement</div>
+              <button class="btn_announement tablinks" onclick="openTab(event, 'tabAnnouncement');">
+                <div class="label_announement-btn">Announement</div>
               </button>
             </div>
 
@@ -255,7 +258,6 @@
               color: #fff;
               width: 97px;
               height: 34px;
-              margin: 0 8px 0 0;
               padding: 7px 8px;
               border-radius: 20px;
               border: solid 1px
@@ -264,7 +266,6 @@
             .btn_announement {
               background-color: #f2f2f2;
               color: #000;
-              /* width: 119px; */
               text-align: center;
               height: 34px;
               margin: 0 0 0 8px;
@@ -276,47 +277,51 @@
             .label_notifi-btn {
               font-family: Med;
               font-size: 20px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
               line-height: 1;
-              letter-spacing: normal;
               text-align: center;
-              color: var(--cement-10);
+              color: #fff;
             }
 
-            .label_announement {
+            .label_announement-btn {
               font-family: Med;
               font-size: 20px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
               line-height: 1;
-              letter-spacing: normal;
               text-align: center;
-              color: var(--base-black);
+              color: #000;
             }
           </style>
 
-          <section>
-            <div class="notifi-container tablinks" onclick="openCity(event, 'tabDetailMailBox');container_display();">
-              <div>
-                <span class="label_notifi"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
+          <section class="container_notifi">
+            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display(); ">
+              <div style="padding-top: 8px;">
+                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
                   ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
               </div>
-              <div class="label-detail_notifi">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+              <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
                 สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
               </div>
-              <div>
-                <span class="label_notified">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+            </div>
+          </section>
+
+          <section class="container_notifi">
+            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display(); ">
+              <div style="padding-top: 8px;">
+                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
+                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
               </div>
-              <div class="label-detail_notified">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+              <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
                 สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
               </div>
-              <div>
-                <span class="label_notified">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+            </div>
+          </section>
+
+          <section class="container_notifi-unread">
+            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
+              <div style="padding-top: 8px;">
+                <span class="item">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span>
+                <span class="label_date">20/1/2021</span>
               </div>
-              <div class="label-detail_notified">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+              <div class="item_detail">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
                 สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
               </div>
             </div>
@@ -324,98 +329,78 @@
 
           <script>
             function container_display() {
-              var x = document.getElementById("tab-con");
-              if (x.style.display === "none") {
-                x.style.display = "flex";
-              } else {
-                x.style.display = "none";
+              for (var i = 1; i <= 2; i++) {
+                var x = document.getElementById("tab-con" + i);
+                if (x.style.display === "none") {
+                  x.style.display = "flex";
+                } else {
+                  x.style.display = "none";
+                }
               }
             }
+            // }
           </script>
 
           <style>
-            .notifi-container {
-              /* width: 100%; */
-              height: 70px;
+            .container_notifi {
+              background-color: #fff;
+            }
+
+            .container_notifi-unread {
+              background-color: #f5f5f5;
+            }
+
+            .list_notifi {
               margin-left: 16px;
               margin-right: 16px;
-              /* padding: 0 16px; */
               border-bottom: 1px solid #f2f2f2;
             }
 
-            .label_notifi {
+            .list_notifi .item-unread {
               width: 100%;
-              /* height: 40px; */
               margin: 0 8px 0 0;
               font-family: Med;
               font-size: 20px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
               line-height: 1;
-              letter-spacing: normal;
-              /* text-align: left; */
               color: var(--base-black);
             }
 
-            .label_notified {
+            .list_notifi .item_detail-unread {
               width: 100%;
-              /* height: 40px; */
-              margin: 0 8px 0 16px;
-              font-family: Med;
-              font-size: 20px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 1;
-              letter-spacing: normal;
-              /* text-align: left; */
-              color: #4d4d4d;
-            }
-
-            .label_date {
-              /* width: 100%; */
-              height: 18px;
-              margin: 0 0 22px 18px;
-              font-family: Reg;
-              font-size: 18px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 1;
-              letter-spacing: normal;
-              /* text-align: left; */
-              color: #808080;
-              float: right;
-            }
-
-            .label-detail_notifi {
-              width: 100%;
-              height: 40px;
-              margin: 2px 16px 16px;
+              margin: 2px 16px 8px;
               font-family: Reg;
               font-size: 20px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
               line-height: 1;
-              letter-spacing: normal;
               text-align: left;
               color: #4d4d4d;
               /* border-bottom: 3px solid #f2f2f2; */
             }
 
-            .label-detail_notified {
+            .list_notifi .item {
               width: 100%;
-              height: 40px;
-              margin: 2px 16px 16px;
+              margin: 0 8px 0 16px;
+              font-family: Med;
+              font-size: 20px;
+              line-height: 1;
+              color: #4d4d4d;
+            }
+
+            .label_date {
+              margin: 0 0 22px 18px;
+              font-family: Reg;
+              font-size: 18px;
+              line-height: 1;
+              color: #808080;
+              float: right;
+            }
+
+
+            .list_notifi .item_detail {
+              width: 100%;
+              margin: 2px 16px 8px;
               font-family: Reg;
               font-size: 20px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
               line-height: 1;
-              letter-spacing: normal;
               text-align: left;
               color: #808080;
               /* border-bottom: 3px solid #f2f2f2; */
@@ -425,97 +410,37 @@
         </div>
 
         <style>
-          .contailner-detail-mailbox {
-            background-color: #fff;
-            width: 100%;
-            height: 60px;
-            padding: 20px 16px;
-            text-align: center;
-            border-bottom: 2px solid#f2f2f2;
-          }
-
-          .frame-detail-mailbox {
-            width: 100%;
-            height: 40px;
-            padding: 0 24px 0 0;
-          }
-
-          .frame-btn {
-            float: left;
-            display: inline-block;
-            border-radius: 6px;
-          }
-
-          /* .icon-back {
-            width: 24px;
-            height: 24px;
-            padding: 4px 0 8px 14.5px;
-            color: #d26132
-          } */
-
-          .label-title-detail {
-            width: 100%;
-            font-family: Med;
-            font-size: 20px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1;
-            letter-spacing: 0.2px;
-            text-align: center;
-            color: rgba(0, 0, 0, 0.8);
-          }
-
           .frame-detail2-mailbox {
             width: 100%;
-            height: 432px;
             padding: 16px;
+            margin-top: -35px;
           }
 
-
-
           .label-detail-notifi {
-            width: 80%;
-            height: 20px;
             margin: 0 8px 0 0;
             font-family: Med;
             font-size: 20px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
             line-height: 1;
-            letter-spacing: normal;
             text-align: left;
             color: rgba(0, 0, 0, 0.4);
           }
 
           .label-detail-date {
-            /* width: 20%; */
             float: right;
-            height: 18px;
             margin: 0 0 2px 8px;
             font-family: Reg;
             font-size: 18px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
             line-height: 1;
-            letter-spacing: normal;
             text-align: left;
             color: rgba(0, 0, 0, 0.4);
           }
 
-          .title-deatil {
-            width: 80%;
-            height: 60px;
+          .title-detail {
+            width: 100%;
             margin: 8px 0 0;
             font-family: Med;
             font-size: 30px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
             line-height: 1;
-            letter-spacing: normal;
             text-align: left;
             color: #000000;
           }
@@ -525,11 +450,7 @@
             margin: 8px 0 0;
             font-family: Reg;
             font-size: 20px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
             line-height: 1;
-            letter-spacing: normal;
             text-align: left;
             color: #4d4d4d;
           }
@@ -542,9 +463,6 @@
             border-radius: 8px;
             font-size: 20px;
             font-family: Bd;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
             line-height: normal;
             letter-spacing: 0.4px;
             text-align: center;
@@ -554,19 +472,114 @@
           }
         </style>
 
-        <div id="tabDetailMailBox" class="tabcontent">
-          <div class="contailner-detail-mailbox">
-            <div class="frame-detail-mailbox">
-              <div class="frame-btn tablinks" onclick="openCity(event, 'tabMailBox') ; container_display();">Back</div>
-              <span class="label-title-detail">NOTIFICATION</span>
+        <div id="tabAnnouncement" class="tabcontent">
+          <section>
+            <div class="btn-container">
+              <button class="btn_notifi tablinks" onclick="openTab(event, 'tabMailBox');">
+                <div class="label_notifi-btn">Notification</div>
+              </button>
+              <button class="btn_announement tablinks" onclick="openTab(event, 'tabAnnouncement');">
+                <div class="label_announement-btn">Announement</div>
+              </button>
             </div>
-          </div>
 
+          </section>
+          <section class="container_notifi">
+            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
+              <div style="padding-top: 8px;">
+                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
+                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+              </div>
+              <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+              </div>
+            </div>
+          </section>
+
+          <section class="container_notifi">
+            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
+              <div style="padding-top: 8px;">
+                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
+                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+              </div>
+              <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+              </div>
+            </div>
+          </section>
+
+          <section class="container_notifi">
+            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
+              <div style="padding-top: 8px;">
+                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
+                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+              </div>
+              <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+              </div>
+            </div>
+          </section>
+
+          <section class="container_notifi">
+            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
+              <div style="padding-top: 8px;">
+                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
+                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+              </div>
+              <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+              </div>
+            </div>
+          </section>
+
+          <section class="container_notifi-unread">
+            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
+              <div style="padding-top: 8px;">
+                <span class="item">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span>
+                <span class="label_date">20/1/2021</span>
+              </div>
+              <div class="item_detail">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+              </div>
+            </div>
+          </section>
+
+          <section class="container_notifi-unread">
+            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
+              <div style="padding-top: 8px;">
+                <span class="item">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span>
+                <span class="label_date">20/1/2021</span>
+              </div>
+              <div class="item_detail">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+              </div>
+            </div>
+          </section>
+
+          <section class="container_notifi-unread">
+            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
+              <div style="padding-top: 8px;">
+                <span class="item">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span>
+                <span class="label_date">20/1/2021</span>
+              </div>
+              <div class="item_detail">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div id="tabDetailMailBox" class="tabcontent">
+          <nav class="page-navbar">
+            <button class="btn btn-back tablinks" type="button"
+              onclick="openTab(event,'tabMailBox');container_display();"></button><span
+              class="title">NOTIFICATION</span>
+          </nav>
           <section>
             <div class="frame-detail2-mailbox">
               <span class="label-detail-notifi">Notification</span>
               <span class="label-detail-date">20/1/2021</span>
-              <div class="title-deatil">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</div>
+              <div class="title-detail">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</div>
               <div class="detail-detail">สมาพันธ์ต่อรองเคลมพาร์ทเนอร์ดาวน์ ซูฮกวาไรตี้หล่อฮังก้วย นอมินีสุริยยาตร์ซูชิ
                 กิมจิแครอท ภคันทลาพาธเอเซียแทกติคศิลปากร ราชบัณฑิตยสถานคอมเมนท์มั้ยซูชิกุนซือ โปรเจกเตอร์แบตสปอร์ต
               </div>
@@ -583,20 +596,17 @@
         <style>
           .AFTERSALE-SERVICE {
             width: 100%;
-            height: 30px;
             margin: 0 0 8px;
             font-family: Bd;
             font-size: 30px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
             line-height: 1;
-            letter-spacing: normal;
             text-align: left;
             color: #4d4d4d;
           }
 
           .textarea {
+            font-size: 20px;
+            font-family: 'Reg';
             width: 100%;
             height: 168px;
             padding: 8px 8px 136px;
@@ -607,7 +617,6 @@
 
           .photo-frame {
             width: 100%;
-            height: 52px;
             margin: 8px 0 0;
             padding: 8px 0;
             /* display: flex; */
@@ -615,15 +624,10 @@
 
           .photo-label {
             width: 100%;
-            height: 24px;
             margin: 6px 14px 6px 0;
             font-family: Bd;
             font-size: 24px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
             line-height: 1;
-            letter-spacing: normal;
             text-align: left;
             color: #4d4d4d;
           }
@@ -633,11 +637,7 @@
             height: 20px;
             font-family: Med;
             font-size: 20px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
             line-height: 1;
-            letter-spacing: normal;
             text-align: center;
             color: #3c4143;
           }
@@ -652,24 +652,19 @@
             border: solid 1px #e5e5e5;
             font-family: Med;
             font-size: 20px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
             line-height: 1;
           }
 
           .frame-insert-image {
-            /* width: 328px; */
-            height: 194px;
-            /* margin: 286px 0 0; */
             padding: 0 0 16px;
           }
 
           .btn-submit {
+            font-family: Bd;
+            font-size: 20px;
             width: 100%;
             height: 48px;
             margin: 16px 0 0;
-            /* padding: 12px 136.5px; */
             border-radius: 8px;
             background-color: #d26132;
             color: #fff;
@@ -684,9 +679,6 @@
           .imageThumb {
             height: 102px;
             width: 102px;
-            /* border: 2px solid;
-            padding: 1px;
-            cursor: pointer; */
           }
 
           .pip {
@@ -699,10 +691,8 @@
             width: 15px;
             height: 16px;
             border-radius: 12px;
-            /* padding: 4px 4px 4px 4px; */
             background-image: url(./images/icon/close.svg);
             background-repeat: no-repeat, repeat;
-            /* border: 1px solid black; */
             color: white;
             text-align: center;
             cursor: pointer;
@@ -711,7 +701,6 @@
             right: 8px;
             background-color: #fff;
           }
-
 
           .remove:hover {
             background: white;
@@ -738,10 +727,6 @@
           <section style=" padding: 0px 16px 16px 16px">
             <div class="photo-frame">
               <div class="photo-label">PHOTOS</div>
-
-              <!-- <input type="button" value="Upload" class="btn-upload" onclick="document.getElementById('files').click();" /> -->
-
-
             </div>
             <div class="frame-insert-image">
               <input type="file" id="files" name="files[]" multiple />
@@ -761,18 +746,12 @@
             padding: 16px 16px 0px 16px;
             font-family: Bd;
             font-size: 30px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
             line-height: 1;
-            letter-spacing: normal;
             text-align: left;
             color: #4d4d4d;
           }
 
           .guidebook-container {
-            /* width: 100%; */
-            /* height: 148px; */
             margin: 8px 16px 16px 16px;
             border-radius: 12px;
             box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
@@ -784,37 +763,26 @@
             width: 96px;
             height: 124px;
             margin: 12px 16px 12px 12px;
-            /* padding: 40px 5px 41px; */
-            /* margin: 0 16px 0 0; */
             border-radius: 8px;
             background-color: #000000;
           }
 
           .resident-guidebook {
+            font-family: 'Bd';
             width: 100%;
-            height: 20px;
             margin-top: 12px;
             font-size: 20px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
             line-height: 1;
-            letter-spacing: normal;
             text-align: left;
             color: #808080;
           }
 
           .detail-book {
             width: 100%;
-            height: 48px;
             margin: 5px 0 0;
             font-family: Bd;
             font-size: 24px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
             line-height: 1;
-            letter-spacing: normal;
             text-align: left;
             color: #1a1a1a;
           }
@@ -822,14 +790,15 @@
           .dowload-btn {
             font-family: Med;
             font-size: 20px;
-            width: 105px;
-            height: 41px;
-            margin: 8px 0px 24px 0;
+            width: 96px;
+            height: 36px;
+            margin: 8px 0px 16px 0;
             padding: 8px 12px;
             border-radius: 32px;
             color: #fff;
             background-color: #d26132;
-            border: solid 1px
+            border: solid 1px;
+            line-height: 18px;
           }
         </style>
 
@@ -837,7 +806,7 @@
           <div class="tab-content">
 
             <section>
-              <div class="guidebook"> Guide Book</div>
+              <div class="guidebook"> GUIDE BOOK</div>
               <div class="guidebook-container">
                 <div style="display: flex;">
                   <div>
@@ -855,17 +824,12 @@
             <style>
               .phone_directory {
                 width: 100%;
-                height: 30px;
                 margin: 0 0 4px;
                 padding-left: 16px;
                 padding-right: 16px;
                 font-family: Bd;
                 font-size: 30px;
-                font-weight: bold;
-                font-stretch: normal;
-                font-style: normal;
                 line-height: 1;
-                letter-spacing: normal;
                 text-align: left;
                 color: #4d4d4d;
               }
@@ -882,7 +846,6 @@
                 display: flex;
                 flex-direction: row;
                 align-items: flex-start;
-                /* width: 100%; */
                 border-bottom: 1px solid #f2f2f2;
               }
 
@@ -905,11 +868,7 @@
                 height: 24px;
                 font-family: Bd;
                 font-size: 24px;
-                font-weight: bold;
-                font-stretch: normal;
-                font-style: normal;
                 line-height: 1;
-                letter-spacing: normal;
                 text-align: left;
                 color: #1a1a1a;
               }
@@ -919,11 +878,7 @@
                 height: 24px;
                 font-family: Reg;
                 font-size: 24px;
-                font-weight: normal;
-                font-stretch: normal;
-                font-style: normal;
                 line-height: 1;
-                letter-spacing: normal;
                 text-align: left;
                 color: #4d4d4d;
               }
@@ -943,7 +898,48 @@
                     <p class="contact-tel">(+66 2) 251-9955</p>
                   </div>
                   <!-- Call -->
-                  <a class="btn-call"></a>
+                  <a class="btn-call">
+                    <img src="./images/icon/i-telephone.svg" alt="" style="padding-top: 14px;">
+                  </a>
+                </div>
+
+                <div class="list-item">
+
+                  <!-- Info -->
+                  <div class="info">
+                    <h3 class="contact-name">Juristic Office</h3>
+                    <p class="contact-tel">(+66 2) 251-9955</p>
+                  </div>
+                  <!-- Call -->
+                  <a class="btn-call">
+                    <img src="./images/icon/i-telephone.svg" alt="" style="padding-top: 14px;">
+                  </a>
+                </div>
+
+                <div class="list-item">
+
+                  <!-- Info -->
+                  <div class="info">
+                    <h3 class="contact-name">Juristic Office</h3>
+                    <p class="contact-tel">(+66 2) 251-9955</p>
+                  </div>
+                  <!-- Call -->
+                  <a class="btn-call">
+                    <img src="./images/icon/i-telephone.svg" alt="" style="padding-top: 14px;">
+                  </a>
+                </div>
+
+                <div class="list-item">
+
+                  <!-- Info -->
+                  <div class="info">
+                    <h3 class="contact-name">Juristic Office</h3>
+                    <p class="contact-tel">(+66 2) 251-9955</p>
+                  </div>
+                  <!-- Call -->
+                  <a class="btn-call">
+                    <img src="./images/icon/i-telephone.svg" alt="" style="padding-top: 14px;">
+                  </a>
                 </div>
 
               </div>
@@ -957,9 +953,7 @@
       </div>
     </div>
     <div>
-      <div class="box-bottom-action notification">
-        <button class="btn btn-noti" type="button">Service Status <span class="number">3</span></button>
-      </div>
+
     </div>
   </div>
 </body>
@@ -967,7 +961,7 @@
 </html>
 
 <script>
-  function openCity(evt, cityName) {
+  function openTab(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -987,21 +981,21 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
-  $(document).ready(function() {
+  $(document).ready(function () {
     if (window.File && window.FileList && window.FileReader) {
-      $("#files").on("change", function(e) {
+      $("#files").on("change", function (e) {
         var files = e.target.files,
           filesLength = files.length;
         for (var i = 0; i < filesLength; i++) {
           var f = files[i]
           var fileReader = new FileReader();
-          fileReader.onload = (function(e) {
+          fileReader.onload = (function (e) {
             var file = e.target;
             $("<div class=\"pip\">" +
               "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
               "<br/><div class=\"remove\"></div>" +
               "</div>").insertAfter("#files");
-            $(".remove").click(function() {
+            $(".remove").click(function () {
               $(this).parent(".pip").remove();
             });
 

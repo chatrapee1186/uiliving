@@ -629,6 +629,8 @@ body {
   padding-bottom: 12px;
   padding-left: 16px;
   width: 100%;
+  max-height: 100vh;
+  transition: all 0.3s ease-in-out;
 }
 .box-package .package-list > .package-list-item.hide {
   display: none;
@@ -1006,6 +1008,79 @@ body {
   background-repeat: no-repeat;
   background-size: 24px;
   background-image: url(../images/i-checked-wh.svg);
+}
+
+.landry-package-option {
+  position: relative;
+}
+
+.package-selected {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  white-space: nowrap;
+}
+.package-selected::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  background-image: url(../images/i-arrow-down-2.svg);
+}
+
+.package-option {
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  width: 300px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: max-height 0.2s;
+}
+.package-option .option-list {
+  padding: 12px;
+}
+.package-option .option-list-item {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.package-option .option-list-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.package-selected.active + .package-option {
+  display: block;
+  max-height: 100vh;
+}
+
+.i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+.i.arrow {
+  background-image: url(../images/i-arrow-down-2.svg);
+}
+
+.hide {
+  display: none !important;
+}
+
+.notes {
+  display: block;
+  font-family: Reg;
+  font-size: 20px;
 }
 
 .box-bottom-action {
@@ -1438,7 +1513,7 @@ body {
 .a-link {
   font-size: 20px;
   text-decoration: none;
-  color: #D26132;
+  color: #d26132;
 }
 
 .rating {
@@ -1463,7 +1538,7 @@ body {
   margin-right: 8px;
   width: 20px;
   height: 20px;
-  background-image: url(/public/images/i-star-inactive.svg);
+  background-image: url(../images/i-star-inactive.svg);
   background-repeat: no-repeat;
   background-size: 20px;
   background-position-y: center;
@@ -1480,7 +1555,7 @@ body {
   background-position-y: center;
 }
 .rating .star.score::after {
-  background-image: url(/public/images/i-star-active.svg);
+  background-image: url(../images/i-star-active.svg);
 }
 
 .detail-box {
@@ -1564,7 +1639,7 @@ body {
 .detail-box .body .list-body .item .value .total-price,
 .detail-box .body .list-footer .item .label .total-price,
 .detail-box .body .list-footer .item .value .total-price {
-  color: #C52121;
+  color: #c52121;
 }
 .detail-box .body .list-heading .item .number,
 .detail-box .body .list-body .item .number,
@@ -1691,7 +1766,7 @@ body {
 .btn-checkout:disabled,
 .btn-cancel:disabled,
 .btn-noti:disabled {
-  color: #FFF;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -1701,17 +1776,17 @@ body {
 }
 
 .btn-next {
-  color: #FFF;
-  background-color: #D26132;
+  color: #fff;
+  background-color: #d26132;
 }
 
 .btn-checkout {
-  color: #D26132;
-  background-color: #FFF;
+  color: #d26132;
+  background-color: #fff;
 }
 
 .btn-cancel {
-  color: #D26132;
+  color: #d26132;
 }
 
 .btn-noti {
@@ -1726,7 +1801,7 @@ body {
   -moz-border-radius: 40px;
   -o-border-radius: 40px;
   border-radius: 40px;
-  border: 1px solid #D26132;
+  border: 1px solid #d26132;
   -webkit-box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.25);
   box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.25);
@@ -1736,10 +1811,26 @@ body {
   width: 24px;
   height: 24px;
   text-align: center;
-  color: #FFF;
-  background-color: #C52121;
+  color: #fff;
+  background-color: #c52121;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   -o-border-radius: 12px;
   border-radius: 12px;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Med;
+  font-size: 18px;
+  color: #d26132;
+}
+
+.btn-showmore {
+  display: block;
+  margin-top: 0.4rem;
+  text-align: center;
 }
