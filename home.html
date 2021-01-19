@@ -293,9 +293,10 @@
 
           <section class="container_notifi">
             <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display(); ">
-              <div style="padding-top: 8px;">
-                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
-                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+              <div class="style-label">
+                <span class="item-unread"> <span style="color: #d26132;">●</span></span>
+                <span class="style-list">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมีซังเตตรวจทาน</span>
+                <span class="label_date">20/1/2021</span>
               </div>
               <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
                 สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
@@ -305,9 +306,10 @@
 
           <section class="container_notifi">
             <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display(); ">
-              <div style="padding-top: 8px;">
-                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
-                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+              <div class="style-label">
+                <span class="item-unread"> <span style="color: #d26132;">●</span></span>
+                <span class="style-list">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมีซังเตตรวจทาน</span>
+                <span class="label_date">20/1/2021</span>
               </div>
               <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
                 สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
@@ -317,7 +319,7 @@
 
           <section class="container_notifi-unread">
             <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
-              <div style="padding-top: 8px;">
+              <div class="style-label">
                 <span class="item">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span>
                 <span class="label_date">20/1/2021</span>
               </div>
@@ -356,8 +358,23 @@
               border-bottom: 1px solid #f2f2f2;
             }
 
+            .list_notifi .style-label {
+              padding-top: 8px;
+              display: flex;
+
+            }
+
+            .list_notifi .style-label .style-list {
+              margin: 0 4px 0 0;
+              font-family: Med;
+              font-size: 20px;
+              line-height: 1;
+              color: var(--base-black);
+
+            }
+
             .list_notifi .item-unread {
-              width: 100%;
+              /* width: 100%; */
               margin: 0 8px 0 0;
               font-family: Med;
               font-size: 20px;
@@ -366,7 +383,7 @@
             }
 
             .list_notifi .item_detail-unread {
-              width: 100%;
+              /* width: 100%; */
               margin: 2px 16px 8px;
               font-family: Reg;
               font-size: 20px;
@@ -386,7 +403,7 @@
             }
 
             .label_date {
-              margin: 0 0 22px 18px;
+              margin: 2px 0px 0px 60px;
               font-family: Reg;
               font-size: 18px;
               line-height: 1;
@@ -396,7 +413,7 @@
 
 
             .list_notifi .item_detail {
-              width: 100%;
+              /* width: 100%; */
               margin: 2px 16px 8px;
               font-family: Reg;
               font-size: 20px;
@@ -483,90 +500,93 @@
               </button>
             </div>
 
-          </section>
-          <section class="container_notifi">
-            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
-              <div style="padding-top: 8px;">
-                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
-                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+            <section class="container_notifi">
+              <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display(); ">
+                <div class="style-label">
+                  <span class="item-unread"> <span style="color: #d26132;">●</span></span>
+                  <span class="style-list">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมีซังเตตรวจทาน</span>
+                  <span class="label_date">20/1/2021</span>
+                </div>
+                <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                  สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+                </div>
               </div>
-              <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
-                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <section class="container_notifi">
-            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
-              <div style="padding-top: 8px;">
-                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
-                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+            <section class="container_notifi">
+              <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display(); ">
+                <div class="style-label">
+                  <span class="item-unread"> <span style="color: #d26132;">●</span></span>
+                  <span class="style-list">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมีซังเตตรวจทาน</span>
+                  <span class="label_date">20/1/2021</span>
+                </div>
+                <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                  สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+                </div>
               </div>
-              <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
-                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <section class="container_notifi">
-            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
-              <div style="padding-top: 8px;">
-                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
-                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+            <section class="container_notifi">
+              <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display(); ">
+                <div class="style-label">
+                  <span class="item-unread"> <span style="color: #d26132;">●</span></span>
+                  <span class="style-list">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมีซังเตตรวจทาน</span>
+                  <span class="label_date">20/1/2021</span>
+                </div>
+                <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                  สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+                </div>
               </div>
-              <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
-                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <section class="container_notifi">
-            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
-              <div style="padding-top: 8px;">
-                <span class="item-unread"> <span style="color: #d26132;">●</span> ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี
-                  ซังเตตรวจทาน</span><span class="label_date">20/1/2021</span>
+            <section class="container_notifi">
+              <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display(); ">
+                <div class="style-label">
+                  <span class="item-unread"> <span style="color: #d26132;">●</span></span>
+                  <span class="style-list">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมีซังเตตรวจทาน</span>
+                  <span class="label_date">20/1/2021</span>
+                </div>
+                <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                  สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+                </div>
               </div>
-              <div class="item_detail-unread">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
-                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <section class="container_notifi-unread">
-            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
-              <div style="padding-top: 8px;">
-                <span class="item">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span>
-                <span class="label_date">20/1/2021</span>
+            <section class="container_notifi-unread">
+              <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
+                <div class="style-label">
+                  <span class="item">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span>
+                  <span class="label_date">20/1/2021</span>
+                </div>
+                <div class="item_detail">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                  สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+                </div>
               </div>
-              <div class="item_detail">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
-                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <section class="container_notifi-unread">
-            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
-              <div style="padding-top: 8px;">
-                <span class="item">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span>
-                <span class="label_date">20/1/2021</span>
+            <section class="container_notifi-unread">
+              <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
+                <div class="style-label">
+                  <span class="item">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span>
+                  <span class="label_date">20/1/2021</span>
+                </div>
+                <div class="item_detail">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                  สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+                </div>
               </div>
-              <div class="item_detail">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
-                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <section class="container_notifi-unread">
-            <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
-              <div style="padding-top: 8px;">
-                <span class="item">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span>
-                <span class="label_date">20/1/2021</span>
+            <section class="container_notifi-unread">
+              <div class="list_notifi tablinks" onclick="openTab(event, 'tabDetailMailBox');container_display();">
+                <div class="style-label">
+                  <span class="item">ฟาสต์ฟู้ด ฟอร์มช็อตปิโตรเคมี ซังเตตรวจทาน</span>
+                  <span class="label_date">20/1/2021</span>
+                </div>
+                <div class="item_detail">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
+                  สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
+                </div>
               </div>
-              <div class="item_detail">แคมเปญ แชมป์ เยลลี่เกย์โหงวน็อกออร์เดอร์ บาบูน
-                สหัชญาณแกสโซฮอล์สุริยยาตรแชมปิยองดิกชันนารี
-              </div>
-            </div>
-          </section>
+            </section>
         </div>
 
         <div id="tabDetailMailBox" class="tabcontent">
