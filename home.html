@@ -639,11 +639,11 @@
             width: 100%;
             margin: 8px 0 0;
             padding: 8px 0;
-            /* display: flex; */
+            display: flex;
           }
 
           .photo-label {
-            width: 100%;
+            width: 70%;
             margin: 6px 14px 6px 0;
             font-family: Bd;
             font-size: 24px;
@@ -673,6 +673,13 @@
             font-family: Med;
             font-size: 20px;
             line-height: 1;
+          }
+
+          .icon-camera {
+            width: 20px;
+            height: 20px;
+            margin-left: 4px;
+            margin-right: 4px;
           }
 
           .frame-insert-image {
@@ -747,9 +754,15 @@
           <section style=" padding: 0px 16px 16px 16px">
             <div class="photo-frame">
               <div class="photo-label">PHOTOS</div>
+              <!-- <input type="button" value="Upload" class="btn-upload" onclick="document.getElementById('files').click();" /> -->
+              <button class="btn-upload" onclick="document.getElementById('files').click();">
+                <div style="display: flex;"><img src="./images/icon/camera.svg" class="icon-camera">
+                  <span>Upload</span></div>
+              </button>
             </div>
             <div class="frame-insert-image">
-              <input type="file" id="files" name="files[]" multiple />
+
+              <input type="file" id="files" style="display: none;" name="files[]" multiple />
               <button class="btn-submit">SUBMIT</button>
             </div>
 
